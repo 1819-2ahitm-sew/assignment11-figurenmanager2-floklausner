@@ -23,9 +23,9 @@ public class Ellipse extends Figure {
     public double getCircumference() {
         double lambda;
 
-        lambda = (hauptachse - nebenachse) / (hauptachse + nebenachse);
+        lambda = (getHauptachse() - getNebenachse()) / (getHauptachse() + getNebenachse());
 
-        return (hauptachse + nebenachse) * Math.PI * (1 + ((3 * lambda * lambda)) / (10 + Math.sqrt(4 - 3 * lambda * lambda)));
+        return (getHauptachse() + getNebenachse()) * Math.PI * (1 + ((3 * lambda * lambda)) / (10 + Math.sqrt(4 - 3 * lambda * lambda)));
     }
 
     public double area() {
